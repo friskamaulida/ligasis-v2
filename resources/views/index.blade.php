@@ -45,7 +45,7 @@
                                 <a href="/news" class="d-block">
                                     <img src="images/icons/hands.png" class="featured-block-image img-fluid" alt="">
 
-                                    <p class="featured-block-text"> <strong>Berita</strong> Ligasis</p>
+                                    <p class="featured-block-text"> <strong>Tugas </strong>E-Learning</p>
                                 </a>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                                 <a href="/ppdb" class="d-block">
                                     <img src="images/icons/heart.png" class="featured-block-image img-fluid" alt="">
 
-                                    <p class="featured-block-text">Program<strong> PPDB</strong></p>
+                                    <p class="featured-block-text">Berita<strong>Ligasis</strong></p>
                                 </a>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
                                 <a href="/maintenance" class="d-block">
                                     <img src="images/icons/receive.png" class="featured-block-image img-fluid" alt="">
 
-                                    <p class="featured-block-text">Tugas <strong>E-Learning</strong></p>
+                                    <p class="featured-block-text">Program<strong>PPDB</strong></p>
                                 </a>
                             </div>
                         </div>
