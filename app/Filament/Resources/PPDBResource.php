@@ -24,6 +24,7 @@ class PPDBResource extends Resource
     protected static ?string $model = PPDB::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Manajemen Website';
     protected static ?string $navigationLabel = 'PPDB';
     protected static ?string $pluralModelLabel = 'PPDB';
 

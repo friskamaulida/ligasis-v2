@@ -21,6 +21,9 @@ class NilaiResource extends Resource
     protected static ?string $model = Nilai::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Data Sekolalah';
+    protected static ?string $navigationLabel = 'Data Nilai';
+    protected static ?string $pluralModelLabel = 'Data Nilai';
     // public static function shouldRegisterNavigation(): bool
     // {
     //     return false;

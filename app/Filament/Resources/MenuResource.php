@@ -19,6 +19,8 @@ class MenuResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationGroup = 'Administrator';
+    protected static ?string $navigationLabel = 'Menu';
+    protected static ?string $pluralModelLabel = 'Menu';
     // public static function shouldRegisterNavigation(): bool
     // {
     //     return false;

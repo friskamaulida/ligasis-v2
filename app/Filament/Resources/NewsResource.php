@@ -28,6 +28,9 @@ class NewsResource extends Resource
     protected static ?string $model = News::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Manajemen Website';
+    protected static ?string $navigationLabel = 'Berita';
+    protected static ?string $pluralModelLabel = 'Berita';
 
     public static function form(Form $form): Form
     {

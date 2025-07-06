@@ -87,29 +87,41 @@
             <section class="about-section section-padding">
     <div class="container">
         <div class="row">
+
             <div class="col-lg-6 col-md-5 col-12">
-                <img src="images/ags.png" class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="">
+                <img src="{{ asset('storage/' . $tentang->foto) }}" class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="{{ $tentang->nama_kepala_sekolah }}">
             </div>
+
             <div class="col-lg-5 col-md-7 col-12">
                 <div class="custom-text-block">
-                    <h3 class="mb-0">Agus Gustawan, M.Pd.</h3>
-                    <p class="text-muted mb-lg-4 mb-md-4">Kepala Sekolah</p>
-                    <p>Kami mengucapkan selamat datang di Website kami Sekolah Dasar Negeri 1 Linggasari yang saya tujukan untuk seluruh unsur pimpinan, guru, karyawan dan siswa serta khalayak umum.</p>
+                    <h3 class="mb-0">{{ $tentang->nama_kepala_sekolah }}, {{ $tentang->gelar }}</h3>
 
-                                <p> Website ini menampilkan informasi tentang segala profil, aktifitas/kegiatan serta fasilitas sekolah kami.</p>
+                    <p class="text-muted mb-lg-4 mb-md-4">{{ $tentang->jabatan }}</p>
+
+                    <p>{!! nl2br($tentang->sambutan) !!}</p>
+
                     <ul class="social-icon mt-4">
+                        @if($tentang->twitter)
                         <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-twitter"></a>
+                            <a href="{{ $tentang->twitter }}" class="social-icon-link bi-twitter" target="_blank"></a>
                         </li>
+                        @endif
+
+                        @if($tentang->facebook)
                         <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-facebook"></a>
+                            <a href="{{ $tentang->facebook }}" class="social-icon-link bi-facebook" target="_blank"></a>
                         </li>
+                        @endif
+
+                        @if($tentang->instagram)
                         <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-instagram"></a>
+                            <a href="{{ $tentang->instagram }}" class="social-icon-link bi-instagram" target="_blank"></a>
                         </li>
+                        @endif
                     </ul>
                 </div>
             </div>
+
         </div>
     </div>
 </section>

@@ -21,6 +21,9 @@ class GuruResource extends Resource
     protected static ?string $model = Guru::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Data Sekolalah';
+    protected static ?string $navigationLabel = 'Data Guru';
+    protected static ?string $pluralModelLabel = 'Data Guru';
 
     // public static function shouldRegisterNavigation(): bool
     // {

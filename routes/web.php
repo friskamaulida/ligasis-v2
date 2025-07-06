@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PPDBController;
+use App\Http\Controllers\TentangController;
 use App\Models\Video;
 use Illuminate\Support\Facades\Route;
 
@@ -13,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
+Route::get('/tentang', [TentangController::class, 'index'])->name('tentang');
+
 Route::get('/news', [NewsController::class, 'index'])->name('news.index');
 Route::get('/news/{slug}', [NewsController::class, 'show'])->name('news.detail');
 
@@ -21,15 +25,17 @@ Route::post('/ppdb', [PPDBController::class, 'store'])->name('ppdb.store');
 Route::get('/ppdb/download/{id}', [PpdbController::class, 'download'])->name('ppdb.download');
 Route::get('/admin/ppdb/{id}/print', [PPDBController::class, 'printFromAdmin'])->name('ppdb.admin.print');
 
+Route::post('/kontak', [MessageController::class, 'store'])->name('contact.store');
+
 // Route::get('/news', function () {
 //     return view('news');
 // });
-Route::get('/kontak', function () {
-    return view('kontak');
-});
-Route::get('/tentang', function () {
-    return view('tentang');
-});
+// Route::get('/kontak', function () {
+//     return view('kontak');
+// });
+// Route::get('/tentang', function () {
+//     return view('tentang');
+// });
 Route::get('/news-detail', function () {
     return view('news-detail');
 });
