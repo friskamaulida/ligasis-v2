@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\BannerResource\Pages;
 use App\Filament\Resources\BannerResource\RelationManagers;
+use App\Filament\Traits\HasDynamicNavigation;
 use App\Models\Banner;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
@@ -23,6 +24,8 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class BannerResource extends Resource
 {
     protected static ?string $model = Banner::class;
+
+    use HasDynamicNavigation;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationGroup = 'Manajemen Website';

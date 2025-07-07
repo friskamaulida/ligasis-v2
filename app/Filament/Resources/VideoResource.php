@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\VideoResource\Pages;
 use App\Filament\Resources\VideoResource\RelationManagers;
+use App\Filament\Traits\HasDynamicNavigation;
 use App\Models\Video;
 use Filament\Forms;
 use Filament\Forms\Components\Textarea;
@@ -21,7 +22,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class VideoResource extends Resource
 {
     protected static ?string $model = Video::class;
-
+    use HasDynamicNavigation;
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationGroup = 'Manajemen Website';
     protected static ?string $navigationLabel = 'Video';

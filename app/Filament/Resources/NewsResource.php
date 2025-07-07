@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\NewsResource\Pages;
 use App\Filament\Resources\NewsResource\RelationManagers;
+use App\Filament\Traits\HasDynamicNavigation;
 use App\Models\News;
 use Filament\Forms;
 use Filament\Forms\Components\DateTimePicker;
@@ -26,7 +27,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class NewsResource extends Resource
 {
     protected static ?string $model = News::class;
-
+    use HasDynamicNavigation;
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationGroup = 'Manajemen Website';
     protected static ?string $navigationLabel = 'Berita';

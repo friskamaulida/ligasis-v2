@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\SiswaResource\Pages;
 use App\Filament\Resources\SiswaResource\RelationManagers;
+use App\Filament\Traits\HasDynamicNavigation;
 use App\Models\Siswa;
 use Filament\Forms;
 use Filament\Forms\Components\Select;
@@ -19,7 +20,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class SiswaResource extends Resource
 {
     protected static ?string $model = Siswa::class;
-
+    use HasDynamicNavigation;
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationGroup = 'Data Sekolalah';
     protected static ?string $navigationLabel = 'Data Siswa';

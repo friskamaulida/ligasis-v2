@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\TentangSekolahResource\Pages;
 use App\Filament\Resources\TentangSekolahResource\RelationManagers;
+use App\Filament\Traits\HasDynamicNavigation;
 use App\Models\TentangSekolah;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
@@ -21,7 +22,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class TentangSekolahResource extends Resource
 {
     protected static ?string $model = TentangSekolah::class;
-
+    use HasDynamicNavigation;
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationGroup = 'Manajemen Website';
     protected static ?string $navigationLabel = 'Tentang Sekolah';

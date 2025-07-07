@@ -10,8 +10,15 @@ class Menu extends Model
         'label',
         'url',
         'icon',
-        'role',
+        'roles',
+        'group',
+        'plural_label',
         'order',
         'is_active',
+    ];
+
+    protected $casts = [
+        'roles' => 'array',
+        'is_active' => 'boolean',
     ];
 }

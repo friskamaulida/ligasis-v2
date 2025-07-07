@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\PPDBResource\Pages;
 use App\Filament\Resources\PPDBResource\RelationManagers;
+use App\Filament\Traits\HasDynamicNavigation;
 use App\Models\PPDB;
 use Filament\Forms;
 use Filament\Forms\Components\DatePicker;
@@ -22,7 +23,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class PPDBResource extends Resource
 {
     protected static ?string $model = PPDB::class;
-
+    use HasDynamicNavigation;
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationGroup = 'Manajemen Website';
     protected static ?string $navigationLabel = 'PPDB';
