@@ -21,6 +21,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Table;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -53,8 +54,12 @@ class NewsResource extends Resource
                 FileUpload::make('thumbnail')
                     ->label('Gambar Thumbnail')
                     ->image()
+                    ->imageEditor()
                     ->directory('news')
-                    ->imageEditor(),
+                    ->disk('public') // PENTING
+                    ->imagePreviewHeight('200') // Optional
+                    ->visibility('public')
+                    ->downloadable(),
 
                 TextInput::make('category')
                     ->label('Kategori')
@@ -93,8 +98,12 @@ class NewsResource extends Resource
             ->columns([
                 ImageColumn::make('thumbnail')
                     ->label('Gambar')
+                    ->disk('public')
                     ->size(60)
-                    ->circular(),
+                    ->circular()
+                    ->defaultImageUrl(fn ($record) => 'https://via.placeholder.com/60') // akan muncul kalau thumbnail null
+                    ->url(fn ($record) => Storage::disk('public')->url($record->thumbnail))
+                    ->openUrlInNewTab(),
 
                 TextColumn::make('title')
                     ->label('Judul')

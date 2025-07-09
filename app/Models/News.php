@@ -8,15 +8,8 @@ use Illuminate\Support\Str;
 class News extends Model
 {
     protected $fillable = [
-        'title',
-        'slug',
-        'body',
-        'thumbnail',
-        'category',
-        'tags',
-        'author',
-        'published_at',
-    ];
+    'title', 'slug', 'thumbnail', 'category', 'tags', 'excerpt', 'body', 'author', 'is_active', 'published_at',
+];
 
     // Otomatis generate slug jika belum ada
     public static function boot()
