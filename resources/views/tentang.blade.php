@@ -6,7 +6,7 @@
         <div class="row">
 
             <div class="col-lg-6 col-md-5 col-12">
-                <img src="{{ asset('storage/' . $data->foto) }}" class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="{{ $data->nama_kepala_sekolah }}">
+                <img src="{{ asset('uploads/' . $data->foto) }}" class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="{{ $data->nama_kepala_sekolah }}">
             </div>
 
             <div class="col-lg-5 col-md-7 col-12">
