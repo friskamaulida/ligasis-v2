@@ -44,9 +44,14 @@ class BannerResource extends Resource
                     ->maxLength(500),
 
                 FileUpload::make('image')
+                    ->label('Gambar')
                     ->image()
+                    ->imageEditor()
                     ->directory('banners')
-                    ->required(),
+                    ->disk('public')
+                    ->imagePreviewHeight('200')
+                    ->visibility('public')
+                    ->downloadable(),
 
                 Toggle::make('is_active')
                     ->label('Tampilkan di Homepage')
@@ -58,7 +63,14 @@ class BannerResource extends Resource
     {
         return $table
             ->columns([
-                ImageColumn::make('image')->label('Gambar')->width(80),
+                ImageColumn::make('image')
+                    ->label('Gambar')
+                    ->disk('public')
+                    ->size(60)
+                    ->circular()
+                    ->defaultImageUrl(fn ($record) => 'https://via.placeholder.com/60') // akan muncul kalau thumbnail null
+                    ->url(fn ($record) => Storage::disk('public')->url($record->thumbnail))
+                    ->openUrlInNewTab(),
                 TextColumn::make('title')->searchable()->sortable(),
                 TextColumn::make('subtitle')->limit(30),
                 ToggleColumn::make('is_active')->label('Aktif'),
