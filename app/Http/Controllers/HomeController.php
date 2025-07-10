@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Banner;
+use App\Models\DataFE;
 use App\Models\News;
 use App\Models\TentangSekolah;
 use App\Models\Video;
@@ -15,11 +16,12 @@ class HomeController extends Controller
         $banners = Banner::where('is_active', true)->get();
         $tentang = TentangSekolah::latest()->first();
         $videos = Video::where('is_active', true)->latest()->get();
+        $datafe = DataFE::latest()->first();
         $latestNews = News::where('is_active', true)
             ->orderBy('published_at', 'desc')
             ->take(3)
             ->get();
 
-        return view('index', compact('latestNews','videos','banners','tentang'));
+        return view('index', compact('latestNews','videos','banners','tentang','datafe'));
     }
 }

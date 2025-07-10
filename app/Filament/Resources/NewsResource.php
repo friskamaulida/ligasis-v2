@@ -55,9 +55,9 @@ class NewsResource extends Resource
                     ->label('Gambar Thumbnail')
                     ->image()
                     ->imageEditor()
-                    ->directory('news')
-                    ->disk('public') // PENTING
-                    ->imagePreviewHeight('200') // Optional
+                    ->directory('thumbnails')
+                    ->disk('public')
+                    ->imagePreviewHeight('200')
                     ->visibility('public')
                     ->downloadable(),
 

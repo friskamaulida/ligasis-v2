@@ -1,5 +1,36 @@
 @extends('/layout/layout')
 @section('content')
+<style>
+  .modern-marquee {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(to right, #f9f9f9, #ffffff);
+    padding: 12px 0;
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .text-content {
+    display: inline-block;
+    white-space: nowrap;
+    color: #333;
+    font-size: 2rem;
+    font-weight: 500;
+    padding-left: 100%;
+    animation: scroll-left 20s linear infinite;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+</style>
 <section class="hero-section hero-section-full-height">
     <div class="container-fluid">
         <div class="row">
@@ -8,7 +39,7 @@
                     <div class="carousel-inner">
                         @foreach ($banners as $index => $banner)
                             <div class="carousel-item @if($index == 0) active @endif">
-                                <img src="{{ asset('storage/' . $banner->image) }}" class="carousel-image img-fluid" alt="Banner {{ $index + 1 }}">
+                                <img src="{{ asset('uploads/' . $banner->image) }}" class="carousel-image img-fluid" alt="Banner {{ $index + 1 }}">
                                 <div class="carousel-caption d-flex flex-column justify-content-end">
                                     <h1>{{ $banner->title }}</h1>
                                     <p>{{ $banner->subtitle }}</p>
@@ -31,6 +62,12 @@
         </div>
     </div>
 </section>
+
+<div class="modern-marquee">
+  <span class="text-content">
+    🌟 {{ $datafe->running_text }}
+  </span>
+</div>
 
             <section class="section-padding">
                 <div class="container">
@@ -89,7 +126,7 @@
         <div class="row">
 
             <div class="col-lg-6 col-md-5 col-12">
-                <img src="{{ asset('storage/' . $tentang->foto) }}" class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="{{ $tentang->nama_kepala_sekolah }}">
+                <img src="{{ asset('uploads/' . $tentang->foto) }}" class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="{{ $tentang->nama_kepala_sekolah }}">
             </div>
 
             <div class="col-lg-5 col-md-7 col-12">
@@ -142,7 +179,7 @@
                     <div class="news-block">
                         <div class="news-block-top">
                             <a href="{{ route('news.detail', $news->slug) }}">
-                                <img src="{{ asset('storage/' . $news->thumbnail) }}" class="news-image img-fluid" alt="{{ $news->title }}">
+                                <img src="{{ asset('uploads/' . $news->thumbnail) }}" class="news-image img-fluid" alt="{{ $news->title }}">
                             </a>
                             <div class="news-category-block">
                                 @foreach (explode(',', $news->category) as $cat)
@@ -192,7 +229,7 @@
                                 </iframe>
                             @else
                                 <video class="d-block w-100" controls>
-                                    <source src="{{ asset('storage/videos/' . $video->youtube_url) }}" type="video/mp4">
+                                    <source src="{{ asset('uploads/videos/' . $video->youtube_url) }}" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             @endif

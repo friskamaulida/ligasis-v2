@@ -20,7 +20,7 @@
             <div class="col-lg-8 col-12">
                 <div class="news-block">
                     <div class="news-block-top mb-4">
-                        <img src="{{ asset('storage/' . $news->thumbnail) }}" class="news-image img-fluid" alt="{{ $news->title }}">
+                        <img src="{{ asset('uploads/' . $news->thumbnail) }}" class="news-image img-fluid" alt="{{ $news->title }}">
                         <div class="news-category-block mt-2">
                             @foreach (explode(',', $news->category) as $category)
                                 <a href="#" class="category-block-link">{{ trim($category) }}</a>

@@ -22,7 +22,7 @@
                     <div class="news-block mb-4">
                         <div class="news-block-top">
                             <a href="{{ route('news.detail', $item->slug) }}">
-                                <img src="{{ asset('storage/' . $item->thumbnail) }}" class="news-image img-fluid" alt="{{ $item->title }}">
+                                <img src="{{ asset('uploads/' . $item->thumbnail) }}" class="news-image img-fluid" alt="{{ $item->title }}">
                             </a>
                             <div class="news-category-block">
                                 @foreach (explode(',', $item->category) as $category)
@@ -76,7 +76,7 @@
                     <div class="news-block news-block-two-col d-flex mt-4">
                         <div class="news-block-two-col-image-wrap">
                             <a href="{{ route('news.detail', $item->slug) }}">
-                                <img src="{{ asset('storage/' . $item->thumbnail) }}" class="news-image img-fluid" alt="{{ $item->title }}">
+                                <img src="{{ asset('uploads/' . $item->thumbnail) }}" class="news-image img-fluid" alt="{{ $item->title }}">
                             </a>
                         </div>
                         <div class="news-block-two-col-info">
