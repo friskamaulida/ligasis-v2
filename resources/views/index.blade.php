@@ -16,7 +16,7 @@
     display: inline-block;
     white-space: nowrap;
     color: #333;
-    font-size: 2rem;
+    font-size: 1,2rem;
     font-weight: 500;
     padding-left: 100%;
     animation: scroll-left 20s linear infinite;
@@ -40,9 +40,9 @@
                         @foreach ($banners as $index => $banner)
                             <div class="carousel-item @if($index == 0) active @endif">
                                 <img src="{{ asset('uploads/' . $banner->image) }}" class="carousel-image img-fluid" alt="Banner {{ $index + 1 }}">
-                                <div class="carousel-caption d-flex flex-column justify-content-end">
-                                    <h1>{{ $banner->title }}</h1>
-                                    <p>{{ $banner->subtitle }}</p>
+                                <div class=" d-flex flex-column justify-content-end">
+                                    {{-- <h1>{{ $banner->title }}</h1> --}}
+                                    {{-- <p>{{ $banner->subtitle }}</p> --}}
                                 </div>
                             </div>
                         @endforeach
@@ -80,7 +80,7 @@
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                             <div class="featured-block d-flex justify-content-center align-items-center">
                                 <a href="/news" class="d-block">
-                                    <img src="images/icons/hands.png" class="featured-block-image img-fluid" alt="">
+                                    <img src="images/icons/Asset4.png" class="featured-block-image img-fluid" alt="">
 
                                     <p class="featured-block-text"> <strong>Tugas </strong>E-Learning</p>
                                 </a>
@@ -90,7 +90,7 @@
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                             <div class="featured-block d-flex justify-content-center align-items-center">
                                 <a href="/ppdb" class="d-block">
-                                    <img src="images/icons/heart.png" class="featured-block-image img-fluid" alt="">
+                                    <img src="images/icons/Asset2.png" class="featured-block-image img-fluid" alt="">
 
                                     <p class="featured-block-text">Berita<strong>Ligasis</strong></p>
                                 </a>
@@ -100,7 +100,7 @@
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                             <div class="featured-block d-flex justify-content-center align-items-center">
                                 <a href="/maintenance" class="d-block">
-                                    <img src="images/icons/receive.png" class="featured-block-image img-fluid" alt="">
+                                    <img src="images/icons/Asset1.png" class="featured-block-image img-fluid" alt="">
 
                                     <p class="featured-block-text">Program<strong>PPDB</strong></p>
                                 </a>
@@ -110,7 +110,7 @@
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                             <div class="featured-block d-flex justify-content-center align-items-center">
                                 <a href="/ligasis" class="d-block">
-                                    <img src="images/icons/scholarship.png" class="featured-block-image img-fluid" alt="">
+                                    <img src="images/icons/Asset3.png" class="featured-block-image img-fluid" alt="">
 
                                     <p class="featured-block-text"><strong>Login</strong> Akun</p>
                                 </a>

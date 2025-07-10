@@ -49,12 +49,12 @@ https://templatemo.com/tm-581-kind-heart-charity
 -----------------------------------------*/
 :root {
   --white-color:                  #ffffff;
-  --primary-color:                #5bc1ac;
-  --secondary-color:              #5a6f80;
+  --primary-color:                #33b1ff;
+  --secondary-color:              #5b7c97;
   --section-bg-color:             #f0f8ff;
   --site-footer-bg-color:         #44525d;
-  --custom-btn-bg-color:          #597081;
-  --custom-btn-bg-hover-color:    #5bc1ac;
+  --custom-btn-bg-color:          #3392da;
+  --custom-btn-bg-hover-color:    #3e9fff;
   --dark-color:                   #000000;
   --p-color:                      #717275;
   --border-color:                 #e9eaeb;
@@ -392,7 +392,7 @@ strong {
   color: var(--p-color);
   font-size: var(--p-font-size);
   font-weight: var(--font-weight-medium);
-  position: relative;
+  position: flex;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -453,11 +453,16 @@ strong {
 }
 
 @media screen and (min-width: 992px) {
-  .dropdown:hover .dropdown-menu {
-    display: block;
+  .dropdown:hover > .dropdown-menu {
+    display: block !important;
     margin-top: 0;
   }
 }
+/* @media (min-width: 1400px) {
+  .navbar-nav > .nav-item:not(.keep-visible) {
+    display: none !important;
+  }
+} */
 
 .navbar-toggler {
   border: 0;
@@ -523,6 +528,9 @@ strong {
 
 .navbar-toggler .navbar-toggler-icon::after {
   top: 8px;
+}
+.navbar-collapse {
+  transition: max-height 0.3s ease;
 }
 
 

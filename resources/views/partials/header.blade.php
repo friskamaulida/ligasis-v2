@@ -3,7 +3,7 @@
         <header class="site-header">
             <div class="container">
                 <div class="row">
-                    
+
                     <div class="col-lg-8 col-12 d-flex flex-wrap">
                         <p class="d-flex me-4 mb-0">
                             <i class="bi-geo-alt me-2"></i>
@@ -21,9 +21,9 @@
 
                     <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
                         <ul class="social-icon">
-                            <li class="social-icon-item">
+                            {{-- <li class="social-icon-item">
                                 <a href="#" class="social-icon-link bi-twitter"></a>
-                            </li>
+                            </li> --}}
 
                             <li class="social-icon-item">
                                 <a href="#" class="social-icon-link bi-facebook"></a>
@@ -47,4 +47,3 @@
             </div>
         </header>
 
-        
