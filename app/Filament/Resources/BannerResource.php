@@ -69,7 +69,7 @@ class BannerResource extends Resource
                     ->size(60)
                     ->circular()
                     ->defaultImageUrl(fn ($record) => 'https://via.placeholder.com/60') // akan muncul kalau thumbnail null
-                    ->url(fn ($record) => Storage::disk('public')->url($record->banners))
+                    // ->url(fn ($record) => Storage::disk('public')->url($record->banners))
                     ->openUrlInNewTab(),
                 TextColumn::make('title')->searchable()->sortable(),
                 TextColumn::make('subtitle')->limit(30),
