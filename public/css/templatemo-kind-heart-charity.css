@@ -50,13 +50,13 @@ https://templatemo.com/tm-581-kind-heart-charity
 :root {
   --white-color:                  #ffffff;
   --primary-color:                #33b1ff;
-  --secondary-color:              #5b7c97;
+  --secondary-color:              #4c83b0;
   --section-bg-color:             #f0f8ff;
-  --site-footer-bg-color:         #44525d;
+  --site-footer-bg-color:         #0e5286;
   --custom-btn-bg-color:          #3392da;
   --custom-btn-bg-hover-color:    #3e9fff;
   --dark-color:                   #000000;
-  --p-color:                      #717275;
+  --p-color:                      #6888b0;
   --border-color:                 #e9eaeb;
 
   --body-font-family:             'Metropolis', sans-serif;
@@ -84,6 +84,8 @@ https://templatemo.com/tm-581-kind-heart-charity
 body {
   background-color: var(--white-color);
   font-family: var(--body-font-family);
+  /* zoom: 90%; */
+
 }
 
 
@@ -567,8 +569,8 @@ strong {
   HERO & HERO SLIDE
 -----------------------------------------*/
 .hero-section-full-height {
-  height: 680px;
-  min-height: 680px;
+  height: 480px;
+  min-height: 480px;
   position: relative;
 }
 
@@ -578,8 +580,8 @@ strong {
 }
 
 #hero-slide .carousel-item {
-  height: 680px;
-  min-height: 680px;
+  height: 480px;
+  min-height: 480px;
 }
 
 #hero-slide .carousel-caption {
@@ -591,15 +593,16 @@ strong {
   right: 0;
   left: auto;
   text-align: right;
-  min-width: 680px;
-  min-height: 680px;
+  min-width: 480px;
+  min-height: 480px;
   padding: 100px 100px 50px 100px;
 }
 
 .carousel-image {
   display: block;
   width: 100%;
-  min-height: 680px;
+  height: 480px; /* paksa tinggi jadi 400px */
+  object-fit: cover; /* potong gambar agar tetap memenuhi area */
 }
 
 #hero-slide .carousel-indicators-wrap {
@@ -647,6 +650,10 @@ strong {
   padding: 15px;
 }
 
+.featured-block src {
+ min-width: 20%;
+}
+
 .featured-block:hover {
   background: var(--white-color);
   border-radius: var(--border-radius-medium);
@@ -661,6 +668,8 @@ strong {
   display: block;
   margin: auto;
   transition: all 0.5s;
+  height: 170px;
+  object-fit: contain;
 }
 
 .featured-block:hover .featured-block-text {
