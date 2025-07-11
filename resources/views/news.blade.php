@@ -111,13 +111,13 @@
                 @endif
 
                 <!-- Newsletter -->
-                <form class="custom-form subscribe-form mt-5" action="#" method="post">
+                {{-- <form class="custom-form subscribe-form mt-5" action="#" method="post">
                     <h5 class="mb-4">Newsletter Form</h5>
                     <input type="email" name="subscribe-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email Address" required>
                     <div class="col-lg-12 col-12 mt-2">
                         <button type="submit" class="form-control">Subscribe</button>
                     </div>
-                </form>
+                </form> --}}
             </div>
 
         </div>

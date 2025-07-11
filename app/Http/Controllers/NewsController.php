@@ -12,11 +12,19 @@ class NewsController extends Controller
         $news = News::latest()->paginate(5); // Pagination
         $recentNews = News::latest()->take(3)->get();
 
-        $categories = News::pluck('category')->filter()->flatMap(function ($item) {
-            return explode(',', $item);
-        })->map(fn($cat) => trim($cat))->unique();
+        $categories = News::pluck('category')
+            ->filter()
+            ->flatMap(fn($item) => explode(',', $item))
+            ->map(fn($cat) => trim($cat))
+            ->unique()
+            ->values();
 
-        $tags = ['Donation', 'Food', 'Education', 'Children']; // hardcoded sementara
+        $tags = News::pluck('tags')
+            ->filter()
+            ->flatMap(fn($tagString) => explode(',', $tagString))
+            ->map(fn($tag) => trim($tag))
+            ->unique()
+            ->values();
 
         return view('news', compact('news', 'recentNews', 'categories', 'tags'));
     }
