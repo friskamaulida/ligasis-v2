@@ -95,7 +95,9 @@
                 <div class="category-block d-flex flex-column mt-5">
                     <h5 class="mb-3">Categories</h5>
                     @foreach ($categories as $category)
-                        <a href="#" class="category-block-link">{{ $category }}</a>
+                        <a href="{{ route('news.byCategory', ['kategori' => $category]) }}" class="category-block-link">
+                            {{ $category }}
+                        </a>
                     @endforeach
                 </div>
                 @endif
@@ -105,7 +107,9 @@
                 <div class="tags-block mt-5">
                     <h5 class="mb-3">Tags</h5>
                     @foreach ($tags as $tag)
-                        <a href="#" class="tags-block-link">{{ $tag }}</a>
+                        <a href="{{ route('news.byTag', ['tag' => $tag]) }}" class="tags-block-link">
+                            {{ $tag }}
+                        </a>
                     @endforeach
                 </div>
                 @endif

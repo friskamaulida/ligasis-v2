@@ -19,6 +19,9 @@ Route::get('/tentang', [TentangController::class, 'index'])->name('tentang');
 
 Route::get('/news', [NewsController::class, 'index'])->name('news.index');
 Route::get('/news/{slug}', [NewsController::class, 'show'])->name('news.detail');
+Route::get('/kategori/{kategori}', [NewsController::class, 'byCategory'])->name('news.byCategory');
+Route::get('/tag/{tag}', [NewsController::class, 'byTag'])->name('news.byTag');
+
 
 Route::get('/ppdb', [PPDBController::class, 'index'])->name('ppdb.index');
 Route::post('/ppdb', [PPDBController::class, 'store'])->name('ppdb.store');
