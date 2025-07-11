@@ -65,7 +65,7 @@
 
 <div class="modern-marquee">
   <span class="text-content">
-    🌟 {{ $datafe->running_text }}
+    {{ $datafe->running_text }}
   </span>
 </div>
 
