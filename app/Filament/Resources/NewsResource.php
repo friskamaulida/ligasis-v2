@@ -120,6 +120,14 @@ class NewsResource extends Resource
                 ToggleColumn::make('is_active')
                     ->label('Aktif'),
 
+                TextColumn::make('tags')
+                    ->label('Tags')
+                    ->limit(40),
+
+                TextColumn::make('excerpt')
+                    ->label('Ringkasan')
+                    ->limit(50),
+
                 TextColumn::make('published_at')
                     ->label('Dipublikasikan')
                     ->dateTime('d M Y H:i'),
