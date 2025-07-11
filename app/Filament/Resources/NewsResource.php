@@ -57,7 +57,7 @@ class NewsResource extends Resource
                     ->imageEditor()
                     ->directory('thumbnails')
                     ->disk('public')
-                    ->imagePreviewHeight('200')
+                    // ->imagePreviewHeight('200')
                     ->visibility('public')
                     ->downloadable(),
 
