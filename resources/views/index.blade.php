@@ -79,7 +79,7 @@
 
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                             <div class="featured-block d-flex justify-content-center align-items-center">
-                                <a href="/news" class="d-block">
+                                <a href="/maintenance" class="d-block">
                                     <img src="images/icons/Asset4.png" class="featured-block-image img-fluid" alt="">
 
                                     <p class="featured-block-text"> <strong>Tugas </strong>E-Learning</p>
@@ -89,7 +89,7 @@
 
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                             <div class="featured-block d-flex justify-content-center align-items-center">
-                                <a href="/ppdb" class="d-block">
+                                <a href="/news" class="d-block">
                                     <img src="images/icons/Asset2.png" class="featured-block-image img-fluid" alt="">
 
                                     <p class="featured-block-text">Berita<strong>Ligasis</strong></p>
@@ -99,7 +99,7 @@
 
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                             <div class="featured-block d-flex justify-content-center align-items-center">
-                                <a href="/maintenance" class="d-block">
+                                <a href="/ppdb" class="d-block">
                                     <img src="images/icons/Asset1.png" class="featured-block-image img-fluid" alt="">
 
                                     <p class="featured-block-text">Program<strong>PPDB</strong></p>

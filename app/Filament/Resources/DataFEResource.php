@@ -18,9 +18,9 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class DataFEResource extends Resource
 {
-    use HasDynamicNavigation;
-    protected static ?string $model = DataFE::class;
 
+    protected static ?string $model = DataFE::class;
+    use HasDynamicNavigation;
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationGroup = 'Manajemen Website';
     protected static ?string $navigationLabel = 'Data Tampilan';
