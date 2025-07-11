@@ -9,7 +9,7 @@ class NewsController extends Controller
 {
     public function index()
     {
-        $news = News::latest()->paginate(5); // Pagination
+        $news = News::latest('published_at')->paginate(5);
         $recentNews = News::latest()->take(3)->get();
 
         $categories = News::pluck('category')
