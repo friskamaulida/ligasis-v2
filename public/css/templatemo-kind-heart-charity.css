@@ -1307,9 +1307,9 @@ blockquote::before {
   padding-top: 70px;
 }
 
-.logo-footer{
+/* .logo-footer{
     height: 140px;
-}
+} */
 
 .site-footer-bottom {
   background-color: var(--secondary-color);
