@@ -385,7 +385,7 @@ strong {
 }
 
 .logo {
-  width: auto;
+  width: 65px;
   height: 65px;
 }
 
@@ -1307,7 +1307,7 @@ blockquote::before {
   padding-top: 70px;
 }
 
-.site-footer .logo-footer{
+.logo-footer{
     height: 140px;
 }
 
