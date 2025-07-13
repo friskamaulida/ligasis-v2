@@ -22,7 +22,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ">
+                    <ul class="navbar-nav" style="font-weight: 600">
                         <li class="nav-item dropdown">
                             <a class="nav-link  click-scroll" href="/">Beranda</a>
                         </li>

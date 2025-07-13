@@ -403,7 +403,7 @@ strong {
   position: flex;
   padding-top: 15px;
   padding-bottom: 15px;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 .navbar-nav .nav-link.active,
@@ -578,8 +578,8 @@ strong {
   HERO & HERO SLIDE
 -----------------------------------------*/
 .hero-section-full-height {
-  height: 600px;
-  min-height: 600px;
+  height: 650px;
+  min-height: 650px;
   position: relative;
 }
 
@@ -589,8 +589,8 @@ strong {
 }
 
 #hero-slide .carousel-item {
-  height: 600px;
-  min-height: 600px;
+  height: 650px;
+  min-height: 650px;
 }
 
 #hero-slide .carousel-caption {
@@ -602,15 +602,15 @@ strong {
   right: 0;
   left: auto;
   text-align: right;
-  min-width: 600px;
-  min-height: 600px;
+  min-width: 650px;
+  min-height: 650px;
   padding: 100px 100px 50px 100px;
 }
 
 .carousel-image {
   display: block;
   width: 100%;
-  height: 600px; /* paksa tinggi jadi 400px */
+  height: 650px; /* paksa tinggi jadi 400px */
   object-fit: cover; /* potong gambar agar tetap memenuhi area */
 }
 
