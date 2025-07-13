@@ -62,7 +62,7 @@
         <div class="header-bar">
             <div class="d-flex flex-wrap align-items-center">
                 <a href="{{ url('/') }}" class="navbar-brand me-4 d-flex align-items-center gap-2 text-white">
-                    <img src="{{ asset('images/logo-ligasis.png') }}" class="logo" alt="ligasis">
+                    <img src="{{ asset('images/logo-ligasis.png') }}" style="height:65px" class="logo" alt="ligasis">
                     <span>
                         <strong class="d-block">SDN 1 Linggasari</strong>
                         <small>Sistem Informasi LIGASIS</small>
