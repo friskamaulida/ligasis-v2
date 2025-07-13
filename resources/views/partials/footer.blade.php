@@ -2,7 +2,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-12 mb-4">
-                        <img src="images/tt.png" class="logo img-fluid" alt="">
+                        <img src="images/logo-ligasis.png" class="logo-footer img-fluid" alt="">
                     </div>
 
                     <div class="col-lg-4 col-md-6 col-12 mb-4">
@@ -58,7 +58,7 @@
                             <p class="copyright-text mb-0">Copyright © 2023 <a href="#">SDN 1 Linggasari</a>.
                         	Design by: <a href="https://satulinggasari.com" target="_blank">LIGASIS</a></p>
                         </div>
-                        
+
                         <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
                             <ul class="social-icon">
                                 <!-- <li class="social-icon-item">
@@ -82,7 +82,7 @@
                                 </li>
                             </ul>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>

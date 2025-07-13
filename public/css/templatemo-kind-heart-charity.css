@@ -49,14 +49,14 @@ https://templatemo.com/tm-581-kind-heart-charity
 -----------------------------------------*/
 :root {
   --white-color:                  #ffffff;
-  --primary-color:                #33b1ff;
+  --primary-color:                #0e5286;
   --secondary-color:              #4c83b0;
   --section-bg-color:             #f0f8ff;
   --site-footer-bg-color:         #0e5286;
   --custom-btn-bg-color:          #3392da;
-  --custom-btn-bg-hover-color:    #3e9fff;
+  --custom-btn-bg-hover-color:    #699eca;
   --dark-color:                   #000000;
-  --p-color:                      #6888b0;
+  --p-color:                      #0e5286;
   --border-color:                 #e9eaeb;
 
   --body-font-family:             'Metropolis', sans-serif;
@@ -328,6 +328,7 @@ strong {
   color: var(--custom-btn-bg-color);
   margin-top: 8px;
   padding: 12px 25px;
+  /* text-align: left; */
 }
 
 .custom-btn:hover {
@@ -357,12 +358,17 @@ strong {
   z-index: 9;
   padding-top: 0;
   padding-bottom: 0;
+  /* justify-content: flex-start; */
 }
 
 .navbar-brand {
   color: var(--primary-color);
   font-size: var(--h6-font-size);
   font-weight: var(--font-weight-bold);
+  display: flex;
+    align-items: center;
+    color: white;
+    gap: 10px;
 }
 
 .navbar-brand span {
@@ -371,7 +377,7 @@ strong {
 }
 
 .navbar-brand small {
-  color: var(--secondary-color);
+  color: white;
   display: block;
   font-size: 10px;
   line-height: normal;
@@ -379,8 +385,8 @@ strong {
 }
 
 .logo {
-  width: 80px;
-  height: auto;
+  width: auto;
+  height: 65px;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -397,12 +403,13 @@ strong {
   position: flex;
   padding-top: 15px;
   padding-bottom: 15px;
+  font-weight: 600;
 }
 
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
   background: transparent;
-  color: var(--primary-color);
+  color: rgb(0, 149, 255);
 }
 
 .dropdown-menu {
@@ -541,8 +548,9 @@ strong {
 -----------------------------------------*/
 .site-header {
   background: var(--primary-color);
-  padding-top: 15px;
-  padding-bottom: 10px;
+  /* padding-top: 15px; */
+  /* padding-bottom: 10px; */
+  padding: 4px;
 }
 
 .site-header p,
@@ -554,6 +562,7 @@ strong {
 
 .site-header .social-icon {
   text-align: right;
+
 }
 
 .site-header .social-icon-link {
@@ -569,8 +578,8 @@ strong {
   HERO & HERO SLIDE
 -----------------------------------------*/
 .hero-section-full-height {
-  height: 480px;
-  min-height: 480px;
+  height: 600px;
+  min-height: 600px;
   position: relative;
 }
 
@@ -580,8 +589,8 @@ strong {
 }
 
 #hero-slide .carousel-item {
-  height: 480px;
-  min-height: 480px;
+  height: 600px;
+  min-height: 600px;
 }
 
 #hero-slide .carousel-caption {
@@ -593,15 +602,15 @@ strong {
   right: 0;
   left: auto;
   text-align: right;
-  min-width: 480px;
-  min-height: 480px;
+  min-width: 600px;
+  min-height: 600px;
   padding: 100px 100px 50px 100px;
 }
 
 .carousel-image {
   display: block;
   width: 100%;
-  height: 480px; /* paksa tinggi jadi 400px */
+  height: 600px; /* paksa tinggi jadi 400px */
   object-fit: cover; /* potong gambar agar tetap memenuhi area */
 }
 
@@ -800,13 +809,14 @@ strong {
   NEWS
 -----------------------------------------*/
 .news-detail-header-section {
-  background-image: url('../images/news/image.png');
+  /* background-image: url('../images/news/image.png'); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-color: #579bd7;
   position: relative;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .news-block-top {
@@ -815,13 +825,13 @@ strong {
   overflow: hidden;
 }
 
-.news-block-two-col-image-wrap {
+/* .news-block-two-col-image-wrap {
   border-radius: var(--border-radius-small);
   position: relative;
   overflow: hidden;
   width: 150px;
   margin-right: 20px;
-}
+} */
 
 .news-category-block {
   background: var(--secondary-color);
@@ -1297,6 +1307,10 @@ blockquote::before {
   padding-top: 70px;
 }
 
+.site-footer .logo-footer{
+    height: 140px;
+}
+
 .site-footer-bottom {
   background-color: var(--secondary-color);
   position: relative;
@@ -1316,6 +1330,9 @@ blockquote::before {
 
 .site-footer-link {
   color: var(--white-color);
+}
+.site-footer-link:hover {
+  color: yellow;
 }
 
 .copyright-text {
@@ -1340,6 +1357,7 @@ blockquote::before {
   column-count: 2;
   margin: 0;
   padding: 0;
+
 }
 
 .footer-menu-item {
@@ -1347,6 +1365,9 @@ blockquote::before {
   display: block;
 }
 
+.site-footer-title{
+    color: var(--white-color);
+}
 .footer-menu-link {
   font-size: var(--p-font-size);
   color: var(--white-color);
@@ -1356,6 +1377,9 @@ blockquote::before {
   margin-bottom: 5px;
 }
 
+.footer-menu-link:hover{
+    color:#FF6;
+}
 
 /*---------------------------------------
   SOCIAL ICON
@@ -1364,7 +1388,9 @@ blockquote::before {
   margin: 0;
   padding: 0;
 }
-
+.social-icon:hover {
+  color: #359aff;
+}
 .social-icon-item {
   list-style: none;
   display: inline-block;
@@ -1477,7 +1503,11 @@ blockquote::before {
 
   .site-header .social-icon {
     text-align: left;
-    margin-top: 5px;
+    /* margin-top: 5px; */
+    align-items: center;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .hero-section-full-height {

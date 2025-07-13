@@ -260,7 +260,7 @@
                     <p>Moment kegiatan SDN 1 Linggasari tersimpan dalam kanal <strong>YouTube Satu Linggasari</strong>.</p>
                     <ul class="social-icon mt-4">
                         <li class="social-icon-item">
-                            <a href="https://www.youtube.com/@sdn1linggasari" target="_blank" class="social-icon bi-youtube">ligasis channel</a>
+                            <a href="https://www.youtube.com/@sdn1linggasari" target="_blank" class="social-icon-link bi-youtube"></a>
                         </li>
                     </ul>
                 </div>

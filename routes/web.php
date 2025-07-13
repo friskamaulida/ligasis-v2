@@ -34,9 +34,9 @@ Route::post('/kontak', [MessageController::class, 'store'])->name('contact.store
 // Route::get('/news', function () {
 //     return view('news');
 // });
-// Route::get('/kontak', function () {
-//     return view('kontak');
-// });
+Route::get('/kontak', function () {
+    return view('kontak');
+});
 // Route::get('/tentang', function () {
 //     return view('tentang');
 // });
