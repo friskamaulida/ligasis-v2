@@ -46,12 +46,12 @@
 
 
                     <div class="d-flex flex-wrap">
-                        <a href="/" class="navbar-brand me-4 ">
-                        <img src="images/logo-ligasis.png" class="logo" alt="ligasis">
-                        <div>
-                            <strong>SDN 1 Linggasari</strong><br>
-                            <small>Sistem Informasi LIGASIS</small>
-                        </div>
+                        <a href="/" class="navbar-brand me-4 d-flex align-items-center gap-2">
+                            <img src="{{ asset('images/logo-ligasis.png') }}" class="logo" alt="ligasis">
+                            <span>
+                                <strong>SDN 1 Linggasari</strong><br>
+                                <small>Sistem Informasi LIGASIS</small>
+                            </span>
                         </a>
                         <p class="header-address d-flex me-4 mb-0">
                             <i class="bi-geo-alt me-2"></i>
